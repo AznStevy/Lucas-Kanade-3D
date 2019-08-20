@@ -17,8 +17,8 @@ function im_reduced = impyramid_3d(I)
             end
         case 2
             %% Pad the boundaries.
-            I = [I(1,:); I(1,:);  I ; I(dim(1),:); I(dim(1),:)];  % Add two rows towards the beginning and the end.
-            I = [I(:,1)  I(:,1)   I   I(:,dim(2))  I(:,dim(2))];  % Add two columns towards the beginning and the end.
+            I = [I(1,:); I(1,:); I ; I(dim(1),:); I(dim(1),:)];  % Add two rows towards the beginning and the end.
+            I = [I(:,1), I(:,1), I, I(:,dim(2)), I(:,dim(2))];  % Add two columns towards the beginning and the end.
 
             Wt2 = weights'*weights;
             for i = 0 : newdim(1) -1
